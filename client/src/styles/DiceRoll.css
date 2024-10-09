@@ -1,0 +1,15 @@
+/* src/styles/DiceRoll.css */
+.dice-roll {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .dice-roll button {
+    background-color: #f39c12; /* Accent color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

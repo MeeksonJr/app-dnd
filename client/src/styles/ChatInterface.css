@@ -1,0 +1,31 @@
+/* src/styles/ChatInterface.css */
+.chat-interface {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .chat-interface input {
+    width: 80%;
+    padding: 0.5rem;
+  }
+  
+  .chat-interface button {
+    background-color: #f39c12; /* Accent color */
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
