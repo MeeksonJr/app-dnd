@@ -9,11 +9,11 @@ import Settings from './pages/Settings';
 import './App.css';
 
 // Define the type for a character
-interface Character {
+type Character = {
   name: string;
   race: string;
   classType: string;
-}
+};
 
 const App: React.FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
