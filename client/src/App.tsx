@@ -9,7 +9,7 @@ import Settings from './pages/Settings';
 import './App.css';
 
 // Define the type for a character
-type Character = {
+export type Character = {
   name: string;
   race: string;
   classType: string;
@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
 
   const handleCharacterCreate = (newCharacter: Character) => {
-    setCharacters([...characters, newCharacter]);
+    setCharacters((prevCharacters) => [...prevCharacters, newCharacter]);
   };
 
   return (
