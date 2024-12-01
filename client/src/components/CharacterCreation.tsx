@@ -1,19 +1,19 @@
-// src/components/CharacterCreation.tsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/CharacterCreation.css';
 
-
+// Define the props type for CharacterCreation
 interface CharacterCreationProps {
   onCharacterCreate: (newCharacter: { name: string; race: string; classType: string }) => void;
 }
-const CharacterCreation = ({ onCharacterCreate }) => {
+
+const CharacterCreation: React.FC<CharacterCreationProps> = ({ onCharacterCreate }) => {
   const [name, setName] = useState('');
   const [race, setRace] = useState('');
   const [classType, setClassType] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newCharacter = { name, race, classType };
     onCharacterCreate(newCharacter);
