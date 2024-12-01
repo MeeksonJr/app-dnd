@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/CharacterCreation.css';
 
-// Define the props type for CharacterCreation
+// Define props type for CharacterCreation
 interface CharacterCreationProps {
   onCharacterCreate: (newCharacter: { name: string; race: string; classType: string }) => void;
 }
