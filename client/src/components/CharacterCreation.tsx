@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/CharacterCreation.css';
 
+
+interface CharacterCreationProps {
+  onCharacterCreate: (newCharacter: { name: string; race: string; classType: string }) => void;
+}
 const CharacterCreation = ({ onCharacterCreate }) => {
   const [name, setName] = useState('');
   const [race, setRace] = useState('');
