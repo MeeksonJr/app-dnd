@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -9,17 +8,17 @@ import Campaign from './pages/Campaign';
 import Settings from './pages/Settings';
 import './App.css';
 
-
+// Define the type for a character
 interface Character {
   name: string;
   race: string;
   classType: string;
 }
 
-const App = () => {
-  const [characters, setCharacters] = useState([]);
+const App: React.FC = () => {
+  const [characters, setCharacters] = useState<Character[]>([]);
 
-  const handleCharacterCreate = (newCharacter) => {
+  const handleCharacterCreate = (newCharacter: Character) => {
     setCharacters([...characters, newCharacter]);
   };
 
@@ -29,8 +28,14 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/character" element={<CharacterSheet onCharacterCreate={handleCharacterCreate} />} />
-          <Route path="/character/:id" element={<CharacterDetail characters={characters} />} />
+          <Route
+            path="/character"
+            element={<CharacterSheet onCharacterCreate={handleCharacterCreate} />}
+          />
+          <Route
+            path="/character/:id"
+            element={<CharacterDetail characters={characters} />}
+          />
           <Route path="/campaign" element={<Campaign />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
