@@ -9,6 +9,13 @@ import Campaign from './pages/Campaign';
 import Settings from './pages/Settings';
 import './App.css';
 
+
+interface Character {
+  name: string;
+  race: string;
+  classType: string;
+}
+
 const App = () => {
   const [characters, setCharacters] = useState([]);
 
