@@ -2,11 +2,11 @@ import { useParams } from 'react-router-dom';
 import '../styles/CharacterDetail.css';
 
 // Define the type for a character
-interface Character {
+type Character = {
   name: string;
   race: string;
   classType: string;
-}
+};
 
 // Define the props type for CharacterDetail
 interface CharacterDetailProps {
